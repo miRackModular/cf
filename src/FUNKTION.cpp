@@ -69,7 +69,7 @@ void process(const ProcessArgs &args) override {
 	if (nextTrigger.process(params[NEXT_PARAM].getValue()) & (OP_STATE<20)) OP_STATE+= 1;
 	if (prevTrigger.process(params[PREV_PARAM].getValue()) & (OP_STATE>0)) OP_STATE-= 1;
 		
-	float val ;
+	float val = 0;
 
 	if (OP_STATE==0) {val = abs(inputs[IN1_INPUT].getVoltage());fctDesc="abs";}
 

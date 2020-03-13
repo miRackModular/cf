@@ -180,7 +180,7 @@ void process(const ProcessArgs &args) override {
 	if (params[CLEAR_PARAM].getValue() or inputs[CLEAR_INPUT].getVoltage()>0) gateState[index] = false;
 
 		stepLights[index] = 1.0;
-		gatePulse.trigger(1e-3);
+		gatePulse.trigger();
 	}
 
 	resetLight -= resetLight / lightLambda * args.sampleTime;

@@ -31,10 +31,10 @@ BPOTR_PARAM,
 
 int poles = 4;
 
-float prevf1[8];
-float prevf2[8];
-float prevf3[8];
-float prevf4[8];
+float prevf1[8] = {0};
+float prevf2[8] = {0};
+float prevf3[8] = {0};
+float prevf4[8] = {0};
 
 float delta=0.0;
 float temp1=0.0;

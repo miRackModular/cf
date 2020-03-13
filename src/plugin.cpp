@@ -30,7 +30,7 @@ void init(rack::Plugin *p) {
 	p->addModel(modelDISTO);
 	p->addModel(modelCUBE);
 	p->addModel(modelPATCH);
-	p->addModel(modelLABEL);
+	// p->addModel(modelLABEL);
 	p->addModel(modelLEDS);
 	p->addModel(modelDAVE);
 

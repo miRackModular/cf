@@ -115,21 +115,23 @@ struct SLDisplay : TransparentWidget {
 		float pp = module ? module->sl_pas : 0;
 		float vv = module ? module->sl_value : 1;
 		float xx = (int(pp)%8) ;
-		float yy = int(pp/8)-vv/2 ;
+		float yy = int(pp/8) ;
 
 		
 			nvgBeginPath(args.vg);
-			nvgRect(args.vg, xx*15,65+yy*125, 4.5,10.5);
+			nvgRect(args.vg, xx*15-1,66+yy*125-vv*64, 4+2,10);
 			nvgFillColor(args.vg, nvgRGBA(0x4c, 0xc7, 0xf3, 0xff));
 			nvgFill(args.vg);
-			nvgBeginPath(args.vg);
-			nvgRoundedRect(args.vg, xx*15-3,65+yy*125-3, 10.5,16.5,2.0);
-			nvgFillColor(args.vg, nvgRGBA(0x4c, 0xc7, 0xf3, 0x30));
-			nvgFill(args.vg);		
-			nvgBeginPath(args.vg);
-			nvgRoundedRect(args.vg, xx*15-6,65+yy*125-6, 16.5,22.5,4.0);
-			nvgFillColor(args.vg, nvgRGBA(0x4c, 0xc7, 0xf3, 0x10));
-			nvgFill(args.vg);
+
+			// nvgBeginPath(args.vg);
+			// nvgRoundedRect(args.vg, xx*15-3,65+yy*125-3, 10.5,16.5,2.0);
+			// nvgFillColor(args.vg, nvgRGBA(0x4c, 0xc7, 0xf3, 0x30));
+			// nvgFill(args.vg);		
+			
+			// nvgBeginPath(args.vg);
+			// nvgRoundedRect(args.vg, xx*15-6,65+yy*125-6, 16.5,22.5,4.0);
+			// nvgFillColor(args.vg, nvgRGBA(0x4c, 0xc7, 0xf3, 0x10));
+			// nvgFill(args.vg);
 
 	}
 };
